@@ -6,7 +6,7 @@ const prefixoOlaPortugues = "Olá, "
 
 func Ola(nome string) string {
 	if nome == "" {
-		return prefixoOlaPortugues + "mundo"
+		nome = "mundo"
 	}
 	return prefixoOlaPortugues + nome
 }
