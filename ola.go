@@ -2,25 +2,28 @@ package main
 
 import "fmt"
 
+const espanhol = "espanhol"
+const frances = "frances"
+
 const prefixoOlaPortugues = "Olá, "
 const prefixoOlaEspanhol = "Hola, "
 const prefixoOlaFrances = "Bonjour, "
 
 func Ola(nome string, idioma string) string {
-	teste := "123"
-	fmt.Print(teste)
 	if nome == "" {
 		nome = "mundo"
 	}
 
-	if idioma == "espanhol" {
-		return prefixoOlaEspanhol + nome
+	prefixo := prefixoOlaPortugues
+
+	switch idioma {
+	case espanhol:
+		prefixo = prefixoOlaEspanhol
+	case frances:
+		prefixo = prefixoOlaFrances
 	}
 
-	if idioma == "frances" {
-		return prefixoOlaFrances + nome
-	}
-	return prefixoOlaPortugues + nome
+	return prefixo + nome
 }
 
 func main() {
