@@ -1,5 +1,5 @@
 package inteiros
 
-func Adiciona(x int, y int) int {
+func Adiciona(x, y int) int {
 	return x + y
 }
